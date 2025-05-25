@@ -50,7 +50,7 @@ app.get('/flowers', async (req, res) => {
   }
 });
 
-app.get('/naver-shopping', async (req, res) => {
+app.get('/navershopping', async (req, res) => {
   const flowername = req.query.flowername;
 
   if (!flowername) {
