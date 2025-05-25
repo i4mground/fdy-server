@@ -3,7 +3,6 @@ const axios = require('axios');
 const mongoose = require('mongoose');
 const app = express();
 const port = process.env.PORT || 5000;
-require('dotenv').config();
 
 app.use(function(req, res, next) {
   res.header("Access-Control-Allow-Origin", "*");
@@ -16,8 +15,6 @@ app.use(function(req, res, next) {
 const dbUri = process.env.DB_URI;
 
 mongoose.connect(dbUri);
-
-
 
 const flowerSchema = new mongoose.Schema({
   flowername: String,
